@@ -27,7 +27,7 @@ export function Footer(props) {
             </div>
             <div className="social-container">
                 <div>Connect with us</div>
-                <div class="img-container">
+                <div className="img-container">
                     <img alt='...' src="./images/social_facebook.png" />
                     <img alt='...' src="./images/social_linkedin.png" />
                     <img alt='...' src="./images/social_twitter.png" />

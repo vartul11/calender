@@ -14,8 +14,8 @@ function EventHTML(props) {
 }
 
 function Day(props) {
-    const events = props.event.map((e) => {
-        return <EventHTML event={e} />
+    const events = props.event.map((e, index) => {
+        return <EventHTML key={index} event={e} />
     })
 
     const hoursMapped = hours.map((hour) => {
