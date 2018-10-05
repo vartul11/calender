@@ -1,0 +1,41 @@
+#root {
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+}
+
+.main-container {
+    height: 100%;
+}
+
+.btn {
+    margin: auto;
+    max-width: 120px;
+    margin-top: -15px;
+}
+
+button {
+    background-color: rgb(66, 133, 244);
+    border-radius: 5px;
+}
+
+html {
+    background-color: #eeeeee52;
+}
+
+.img-header {
+    height: 120px;
+    width: 100%;
+}
+
+.img-footer {
+    height: 150px;
+    width: 102%;
+    margin-left: -15px;
+}
+
+.img-logo {
+    height: 50px;
+}

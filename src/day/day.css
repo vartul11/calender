@@ -1,0 +1,61 @@
+.active {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background-color: gainsboro;
+}
+
+.active>div {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.half-hour-break {
+    top: 50%;
+    position: absolute;
+    width: 100%;
+    border-top: 1px solid lightgray;
+    margin: 0;
+    z-index: 98;
+}
+
+
+.hour-container {
+    border-radius: 2px;
+    position: relative;
+    border: 1px solid transparent;
+}
+
+.hour {
+    position: relative;
+    text-align: center;
+    border: 1px solid lightgray;
+    width: 100%;
+    border-bottom: 0px;
+}
+
+.hour:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.hour:last-child {
+    border-bottom: 1px solid lightgray;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.day {
+    width: calc(100%/8);
+    float: left;
+    margin: 10px;
+}
+
+.day-name {
+    text-align: center;
+}
+
+.is-today {
+    border: 1px solid blue;
+    border-radius: 5px;
+}

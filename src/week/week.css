@@ -1,0 +1,7 @@
+.current-time {
+    width: 100%;
+    margin: 0px;
+    border-bottom: 1px dotted black;
+    position: relative;
+    z-index: 100;
+}

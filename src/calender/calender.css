@@ -1,0 +1,21 @@
+.hour-name-wrapper {
+    width: 10%;
+    float: left;
+    margin-top: 20px;
+}
+
+.week-wrapper {
+    width: 90%;
+    float: left;
+}
+
+.calender {
+    padding: 0 40px;
+    background: #eee;
+    height: 100%;
+}
+.hour-name {
+    width: 100%;
+    float: left;
+    text-align: right;
+}
