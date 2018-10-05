@@ -7,11 +7,17 @@ import googleCalenderApp from './google-api/google-api';
 import { Event } from './model/event';
 import { daysInWeek } from './constants'
 import { Calender } from './calender/calender';
+import { Header } from './header/header';
+import { Footer } from './footer/footer';
 
-
-function parseItems(items) {
+/** 
+ * maps calender events into 
+ * {date : event[]} 
+ * for every unique date
+ */
+function parseEvents(events) {
     let itemDateMap = {};
-    items.map((event) => {
+    events.map((event) => {
         let startTime = event.start.dateTime;
         let endTime = event.end.dateTime;
         let endDay = event.end.date;
@@ -30,8 +36,8 @@ function parseItems(items) {
             itemDateMap[endDay] = [];
         }
 
-
-        if (startDay !== endDay) {
+        // breaking event into 2 events if the event spans from over one day
+        if (new Date(startDay) < new Date(endDay)) {
             itemDateMap[startDay].push(new Event({
                 summary: event.summary,
                 start: {
@@ -89,7 +95,7 @@ class App extends React.Component {
     }
     loadEvents() {
         googleCalenderApp.listUpcomingEvents(this.state.startDate, this.state.endDate).then((events) => {
-            let items = parseItems(events.items.slice());
+            let items = parseEvents(events.items.slice());
 
             this.setState({
                 events: items
@@ -110,8 +116,7 @@ class App extends React.Component {
 
         return (
             <div className="main-container">
-                <img alt='...' className="img-logo" src="./logo.png" />
-                <img alt='...' className="img-header" src="./header.png" />
+                <Header />
                 <SignInButton
                     signedIn={this.state.signedIn}
                     signedInStateChanged={this.signedInStateChanged} />
@@ -120,7 +125,7 @@ class App extends React.Component {
                     startDate={this.state.startDate}
                     events={this.state.events}
                 />
-                <img alt='...' className="img-footer" src="./footer.png" />
+                <Footer />
             </div>
         );
     }

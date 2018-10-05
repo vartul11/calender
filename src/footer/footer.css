@@ -1,0 +1,41 @@
+.footer {
+    height: auto;
+    margin-left: -50px;
+    margin-top: -30px;
+    padding-bottom: 20px;
+}
+
+.container {
+    width: 20%;
+    float: left;
+    margin-top: 40px;
+    color: white;
+}
+
+.container>div {
+    margin: 10px;
+}
+
+.social-container>div {
+    margin: 10px;
+}
+
+.data-container {
+    margin-left: 50px;
+    padding-left: 100px;
+    height: 100%;
+    color: white;
+}
+
+.social-container {
+    width: 39%;
+    float: left;
+    border-left: 1px solid white;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.img-container img {
+    width: 24px;
+    margin: 5px;
+}

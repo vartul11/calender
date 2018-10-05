@@ -14,7 +14,7 @@ export function Calender(props) {
     });
 
     return (
-        <div className="calender" >
+        <div className="calender clearfix" >
             <div className="hour-name-wrapper" >
                 {hoursNames}
             </div>

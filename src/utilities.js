@@ -33,6 +33,7 @@ function getHourTextWithMinutes(hour) {
     return `${exactHour}:${minutes} ${meridian}`
 }
 
+// gives formatted date in format dd-mm-yyy
 function getFormatedDate(date) {
     var day = date.getDate();
     day = day < 10 ? '0' + day : day;
@@ -40,8 +41,8 @@ function getFormatedDate(date) {
     var year = date.getFullYear();
 
     return `${day}-${month}-${year}`;
-
 }
+// give the time in ms from date start.
 function getMSFromDayStart(date) {
     let start;
     if (date) {
